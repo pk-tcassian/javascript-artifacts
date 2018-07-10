@@ -1,0 +1,45 @@
+{
+  "name": "nightwatch-cucumber-demo-latest",
+  "version": "1.0.0",
+  "description": "This is a simple demo for running tests using Cucumber and Nightwatch.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/nightwatch -e sauce_chrome",
+    "bdd-run": "node node_modules/.bin/cucumber-js"
+  },
+  "dependencies": {
+    "chromedriver": "^2.40.0",
+    "cucumber": "^4.0.0",
+    "edgedriver": "^4.17134.0",
+    "geckodriver": "^1.11.0",
+    "grunt": "^1.0.3",
+    "nightwatch": "^0.9.20",
+    "node-datetime": "^2.0.6",
+    "selenium-cucumber-js": "^1.5.13",
+    "selenium-server": "^3.13.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "chai": "^4.1.2",
+    "cucumber-html-reporter": "^4.0.3",
+    "cucumber-parallel": "^2.0.3",
+    "cucumber-pretty": "^1.4.4",
+    "export": "^0.1.337",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-cucumberjs": "^2.0.2",
+    "grunt-exec": "^3.0.0",
+    "grunt-nightwatch": "^0.5.4",
+    "load-grunt-tasks": "^4.0.0",
+    "mocha": "^5.2.0",
+    "multiple-cucumber-html-reporter": "^1.10.1",
+    "nightwatch-cucumber": "^9.1.2",
+    "nightwatch-custom-commands-assertions": "^1.1.1",
+    "nightwatch-data-driven": "0.0.8",
+    "pretty": "^2.0.0",
+    "saucelabs": "^1.5.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
