@@ -7,7 +7,7 @@ var options = {
         jsonFile: 'reports/cucumber.json',
         output: 'reports/test_report.html',
         reportSuiteAsScenarios: true,
-        launchReport: true,
+        launchReport: false,
         ignoreBadJsonFile: true,
         storeScreenshots: true,
         metadata: {

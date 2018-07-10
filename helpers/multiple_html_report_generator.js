@@ -3,7 +3,7 @@ const reporter = require('multiple-cucumber-html-reporter');
 reporter.generate({
         jsonDir: 'reports',
         reportPath: 'reports',
-        openReportInBrowser: true,
+        openReportInBrowser: false,
         saveCollectedJSON: false,
         disableLog: 'No',
         displayDuration: true,
