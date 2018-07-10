@@ -1,0 +1,15 @@
+node {
+    stage "Build"
+    git url:'https://github.com/pk-tcassian/javascript-artifacts', branch: 'master'.
+
+    sh 'npm install' // <1>
+
+    stage "Test"
+    sauce('be091a52-f7d9-4b86-8e8d-fff42f32f7ac') { // <2>
+        sauceconnect(options: '', useGeneratedTunnelIdentifier: false, verboseLogging: false) { // <3>
+            sh './node_modules/.bin/nightwatch -e sauce_chrome || true' // <4>
+            junit 'reports/**' // <5>
+            step([$class: 'SauceOnDemandTestPublisher']) // <6>
+        }
+    }
+}

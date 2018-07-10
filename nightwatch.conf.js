@@ -5,33 +5,33 @@ const edgedriver = require('edgedriver');
 
 require('nightwatch-cucumber')({
   cucumberArgs: [
-    '--require', 'step_definitions',
+    '--require', 'tests/features/step_definitions',
     '--require', 'hooks.js',
     '--format', 'node_modules/cucumber-pretty',
     '--format', 'json:reports/cucumber.json',
-    'features']
+    'tests/features']
 });
 
 //'--require-module', 'babel-core/register',
 
 module.exports = {
-  live_output : true,
   test_workers: {
     enabled: true,
     workers: 'auto'
   },
   output_folder: 'reports',
   globals_path: 'helpers/globals.js',
-  page_objects_path: 'page_objects',
+  page_objects_path: 'tests/page_objects',
   custom_commands_path: '',
   custom_assertions_path: '',
   disable_colors: false,
   persist_globals : true,
+  live_output : true,
   selenium: {
     start_process: true,
     server_path: seleniumServer.path,
     log_path: '',
-    host: '162.222.75.45',
+    host: '127.0.0.1',
     port: 4444,
 	  cli_args: {
           'webdriver.chrome.driver': chromedriver.path,
@@ -55,6 +55,13 @@ module.exports = {
         enabled : true,
         on_failure : true,
         path : 'reports/screenshots'
+      },
+      "globals": {
+        "waitForConditionTimeout": 5000, // sometimes internet is slow so wait.
+        "abortOnAssertionFailure" : true,
+        "waitForConditionPollInterval" : 100,
+        "throwOnMultipleElementsReturned" : true,
+        "asyncHookTimeout" : 10000
       },
       desiredCapabilities: {
         platform: 'Windows 10',

@@ -26,8 +26,8 @@ reporter.generate({
                 {label: 'Project', value: 'Nightwatch Cucumber BDD Demo'},
                 {label: 'Release', value: '1.0.0'},
                 {label: 'Cycle', value: '1.0'},
-                {label: 'Execution Start Time', value: ' ' + startTime},
-                {label: 'Execution End Time', value: ' ' + new Date() - startTime}
+                {label: 'Execution Start Time', value: ' ' + new Date()},
+                {label: 'Execution End Time', value: ' ' + new Date()}
             ]
         }
     });

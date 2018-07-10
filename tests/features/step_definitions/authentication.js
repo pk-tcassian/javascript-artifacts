@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const { client } = require('nightwatch-cucumber');
 const { defineSupportCode } = require('cucumber');
@@ -66,4 +66,4 @@ defineSupportCode(({ Given, When, Then, And }) => {
     const articlePageObject = client.page.ArticlePage();
     return articlePageObject.verifyArticleHeading(articleTitle).verifyArticleContent(articleContent);
   });
-});
+}); */

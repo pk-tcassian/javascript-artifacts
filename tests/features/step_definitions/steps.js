@@ -2,11 +2,12 @@
 
 const { client } = require('nightwatch-cucumber');
 const { defineSupportCode } = require('cucumber');
-const And = defineStep;
 
 //const {Given, When, Then, defineStep} = require('cucumber');
 
-defineSupportCode(({ Given, When, Then, And }) => {
+defineSupportCode(({ Given, When, Then, defineStep }) => {
+  const And = defineStep;
+
   Given(/^user is in the home page$/, () => {
     return client
       .url('https://react-redux.realworld.io');
