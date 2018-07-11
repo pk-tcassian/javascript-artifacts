@@ -23,7 +23,7 @@ After({ tags: "not @demo" }, () => new Promise(resolve => {
   const settingsPageObject = client.page.SettingsPage();
   settingsPageObject.performLogout();
   var endTime = new Date() - startTime;
-  sauce.sauceEnd();
+  //sauce.sauceEnd().end();
   setTimeout(() => {
     resolve();
   }, 1000);

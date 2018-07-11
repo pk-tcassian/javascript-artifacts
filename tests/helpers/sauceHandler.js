@@ -1,6 +1,6 @@
 module.exports = {
 
-    sauceEnd: function (callback) {
+    sauceEnd: function (result) {
         var SauceLabs = require("saucelabs");
 
         var saucelabs = new SauceLabs({
@@ -12,9 +12,6 @@ module.exports = {
             jobName = this.currentTest.name,
             passed = this.currentTest.results.testcases[jobName].failed === 0;
 
-
-        console.log("SauceOnDemandSessionID=" + sessionid + " job-name=" + jobName);
-
         var self = this
         saucelabs.updateJob(sessionid, {
             passed: passed,
@@ -22,5 +19,8 @@ module.exports = {
         }, function () {
             self.end(callback)
         });
+
+        console.log("SauceOnDemandSessionID=" + sessionid + " job-name=" + jobName);
+
     }
 };
