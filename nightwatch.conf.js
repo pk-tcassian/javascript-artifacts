@@ -27,6 +27,7 @@ module.exports = {
   disable_colors: false,
   persist_globals: true,
   live_output: true,
+  parallel_process_delay: 10,
   selenium: {
     start_process: true,
     server_path: seleniumServer.path,
@@ -68,17 +69,17 @@ module.exports = {
         path: 'tests/reports/screenshots'
       }
     },
-    "local": {
-      "launch_url": "http//demo.nopcommerce.com",
-      "selenium_port": 4444,
-      "selenium_host": "127.0.0.1",
-      "silent": true,
+    local: {
+      launch_url: "http//demo.nopcommerce.com",
+      selenium_port: 4444,
+      selenium_host: "127.0.0.1",
+      silent: true,
       screenshots: {
         enabled: true,
         on_failure: true,
         path: 'tests/reports/screenshots'
       },
-      "desiredCapabilities": {
+      desiredCapabilities: {
         platform: 'Windows 10',
         browserName: 'chrome',
         javascriptEnabled: true,
@@ -128,8 +129,13 @@ module.exports = {
         name: 'sauce-chrome',
         platform: 'Windows 10',
         browserName: 'chrome',
-        version: '67.0'
-      }
+        version: '66.0'
+      },
+      screenshots: {
+        enabled: true,
+        on_failure: true,
+        path: 'tests/reports/screenshots'
+      },
     },
   }
 };
