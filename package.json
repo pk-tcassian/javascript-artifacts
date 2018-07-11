@@ -4,8 +4,11 @@
   "description": "This is a simple demo for running tests using Cucumber and Nightwatch.",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/nightwatch -e sauce_chrome",
-    "bdd-run": "node node_modules/.bin/cucumber-js"
+    "local-test": "node_modules/.bin/nightwatch -e local",
+    "sauce-test": "node_modules/.bin/nightwatch -e sauce_chrome"
+  },
+  "globals": {
+    "DEFAULT_TIMEOUT": true
   },
   "dependencies": {
     "chromedriver": "^2.40.0",
@@ -24,6 +27,7 @@
     "cucumber-html-reporter": "^4.0.3",
     "cucumber-parallel": "^2.0.3",
     "cucumber-pretty": "^1.4.4",
+    "env2": "^2.2.2",
     "export": "^0.1.337",
     "grunt-cli": "^1.2.0",
     "grunt-contrib-watch": "^1.1.0",
