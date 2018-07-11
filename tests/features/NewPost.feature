@@ -13,5 +13,5 @@ Background:
 
 		Examples:
 		| articleTitle | articleDescription | articleContent | articleTags |
-		| MyTestArticle | current test article | Functional Testing of React JS apps | testing|
-		| PeerTestArticle | previous test article | Functional Testing of React JS apps | React |
+		| MochaArticle | current test article | Functional Testing of React JS apps | testing|
+		| ReactArticle | previous test article | Functional Testing of React JS apps | React |

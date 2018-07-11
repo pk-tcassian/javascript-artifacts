@@ -6,13 +6,13 @@ var startTime = '';
 
 Before(() => new Promise(resolve => {
   console.log('Before execution of Scenario');
-  client.init();
-  client.resizeWindow(1200, 1200);
+  //client.init();
+  client.resizeWindow(1600, 1600);
   startTime = new Date();
   console.log("Wait Timeout: " + globals.waitForConditionTimeout);
   setTimeout(() => {
     resolve();
-  }, 1000);
+  }, 8000);
 }));
 
 After({ tags: "not @demo" }, () => new Promise(resolve => {
@@ -24,7 +24,8 @@ After({ tags: "not @demo" }, () => new Promise(resolve => {
   settingsPageObject.performLogout();
   var endTime = new Date() - startTime;
   //sauce.sauceEnd().end();
+  //client.end();
   setTimeout(() => {
     resolve();
-  }, 1000);
+  }, 8000);
 }));

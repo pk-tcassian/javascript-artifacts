@@ -12,7 +12,8 @@ module.exports = {
       selector: 'input[placeholder="What\'s this article about?"]'
     },
     articleContent: {
-      selector: "textarea[placeholder*='Write your article']"
+      selector: "//textarea[contains(@placeholder, 'Write your article')]",
+      locateStrategy: 'xpath'
     },
     articleTags: {
       selector: "input[placeholder='Enter tags'] div"

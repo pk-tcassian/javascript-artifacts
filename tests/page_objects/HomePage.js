@@ -23,7 +23,7 @@ module.exports = {
       selector: "a[href='#settings']"
     },
     feedContainer: {
-      selector: "div[class='col-md-9']"
+      selector: "div[class='feed-toggle']"
     },
     yourFeed: {
       selector: "//a[contains(text(), 'Your Feed')]",

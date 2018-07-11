@@ -16,5 +16,5 @@ Background:
 
 		Examples:
 		| userName | emailId | password |
-		| raj12 | raj@prokarma.com | Night@2018 |
-		| sumit | sum@prokarma.com | Day@2018 |
+		| User121 | use@prokarma.com | Night@2018 |
+		| Name212 | nam@prokarma.com | Day@2018 |
