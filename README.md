@@ -3,8 +3,10 @@ This is a simple demo for running tests using Cucumber and Nightwatch.
 
 ## Setup & Run
 Make sure you have all dependencies installed with `npm install`.
-You can then run tests with `npm test`.
-Later run 'node ./html_report_generator.js' to generate pretty html report of the test execution.
+You can then run tests in local with `npm run local-test` and 
+to run in sauce, use 'npm run sauce-test' command
+
+Later run 'node ./advanced_cucumber_html_reporter.js' to generate a beautiful html report of the test execution.
 
 ## Troubleshooting
 If you already have chromedriver installed (via Homebrew, for example) then you
